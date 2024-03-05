@@ -40,7 +40,13 @@ const preguntas = [
         opciones: ["Maradona", "Personaje de 'Breaking Bad'", "Personaje de 'El Marginal'", "Ninguna de las anteriores"],
         respuesta: "Personaje de 'El Marginal'"
     }
+    {
+        pregunta: "¿Cuál es la montaña más alta del mundo?",
+        opciones: ["Monte Everest", "K2", "Kangchenjunga", "Lhotse"],
+        respuesta: "Monte Everest"
+    }
 ];
+
 
 
 // Variable para almacenar el puntaje del jugador
@@ -49,10 +55,24 @@ let puntaje = 0;
 // Variable para almacenar las respuestas del usuario
 let respuestasUsuario = [];
 
+
 // Función para solicitar nombre y apellido del jugador
 function ingresarNombre() {
-    const nombre = prompt("Por favor, ingresa tu nombre:");
-    const apellido = prompt("Por favor, ingresa tu apellido:");
+    let nombre, apellido;
+    do {
+        nombre = prompt("Por favor, ingresa tu nombre:");
+        if (!nombre || !isNaN(nombre)) {
+            alert("Error: Por favor, ingresa un nombre válido.");
+        }
+    } while (!nombre || !isNaN(nombre));
+
+    do {
+        apellido = prompt("Por favor, ingresa tu apellido:");
+        if (!apellido || !isNaN(apellido)) {
+            alert("Error: Por favor, ingresa un apellido válido.");
+        }
+    } while (!apellido || !isNaN(apellido));
+
     return nombre + " " + apellido;
 }
 
@@ -65,6 +85,8 @@ function jugar() {
     }
 
     alert(`¡Bienvenido a TriviaPuch, ${nombreCompleto}!`);
+
+
 
     // Iterar sobre cada pregunta en orden
     let continuarJuego = true;
