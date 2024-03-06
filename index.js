@@ -39,7 +39,7 @@ const preguntas = [
         pregunta: "¿Quién es Diosito?",
         opciones: ["Maradona", "Personaje de 'Breaking Bad'", "Personaje de 'El Marginal'", "Ninguna de las anteriores"],
         respuesta: "Personaje de 'El Marginal'"
-    }
+    },
     {
         pregunta: "¿Cuál es la montaña más alta del mundo?",
         opciones: ["Monte Everest", "K2", "Kangchenjunga", "Lhotse"],
